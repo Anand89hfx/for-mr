@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .btn {
+    padding: 20px 40px;
+    font-size: 24px;
+    color: white;
+    background: #ff5e78;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff5e78;
+    animation: glow 1.5s infinite alternate;
+    transition: transform 0.2s;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 10px #ff5e78; }
+    to { box-shadow: 0 0 30px #ff1f5a; }
+  }
+
+  /* Popup box */
+  .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: #ff5e78;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+
+  .popup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff5e78;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <button class="btn" onclick="showPopup()">Click to See Your Surprise 💖</button>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Are you ready for your surprise? 🎁</h2>
+      <p>It’s made with all my love just for you 💞</p>
+      <button onclick="goToSurprise()">Yes, show me!</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById('popup').style.visibility = 'visible';
+    }
+
+    function goToSurprise() {
+      window.location.href = "page2.html";
+    }
+  </script>
+</body>
+</html>
